@@ -93,11 +93,13 @@ ionic cordova build ios --prod --verbose  --buildFlag="-UseModernBuildSystem=0"
 open platforms/ios/MyApp.xcodeproj
 ```
 
-### Android? Other operative systems?
+### Build mobile app for Android
 
 ```
 ionic capacitor copy android
 ```
+
+###  Other operative systems?
 
 We have not tested other OS yet, so in case you are interested is up to you :)
 Check the Ionic documentation here: https://ionicframework.com/docs
