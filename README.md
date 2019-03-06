@@ -79,7 +79,7 @@ Once you have done that, you can execute the UI directly, or build a specific ap
 cd dapp
 ionic serve
 ```
-## Use the dApp form your phone?
+## Use the dApp in your phone?
 
 We are not gonna build an app for each operative system, but in case you want to do it, feel free!
 The UI is built with Ionic, so you can easily transform it in a mobile app following the Ionic documentation.
