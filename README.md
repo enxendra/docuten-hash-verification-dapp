@@ -25,9 +25,7 @@ endpoint:
 ```
 
 
-* **dapp**: A simple UI which allows an easy visual interaction with `server` to verify your documents/invoices hashes. By default it is pointing to a deployed version of `server` which is in Heroku.
-
-However, you can deploy the `server` wherever you want (by default in `localhost:8080`) and modify the endpoint in `dapp/src/app/tab/tab2.page.ts` (line 19):
+* **dapp**: A simple UI which allows an easy visual interaction with `server` to verify your documents/invoices hashes. By default it is pointing to a deployed version of `server` which is in Heroku. However, you can deploy the `server` wherever you want (by default in `localhost:8080`) and modify the endpoint in `dapp/src/app/tab/tab2.page.ts` (line 19):
 
 ```
   public endpoint = 'http://docuten-dapp.herokuapp.com'
