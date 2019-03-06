@@ -14,7 +14,7 @@ This application has two components:
 
 * **server**: this folder contains a `spring-boot` project (built with `gradle`) which is able to directly interact to one of the Docuten Smart Contracts.
 
-This project connects by default to one of our regular nodes () but you can modify the file `application.yaml` to point to the Alastria regular node you prefer (**remember that one of the advantages of the blockchain is that the information is not stored in one single server, but rather distributed in the whole network**).
+This project connects by default to one of our regular nodes (http://blockchain.docuten.com:22000) but you can modify the file `application.yaml` to point to the Alastria regular node you prefer (**remember that one of the advantages of the blockchain is that the information is not stored in one single server, but rather distributed in the whole network**).
 
 This is the configuration you should change in case you want to connect to your own node:
 
