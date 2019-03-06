@@ -1,8 +1,11 @@
 # Docuten Hash Verification dApp for Alastria
 
 This is a decentralized application to verify on the Alastria Blockchain the status of documents and invoices which have been securely certified by Docuten (app.docuten.com).
+
 The idea of this application is to provide an open source solution to allow our customers future verifications of already certified documents and invoices, without the need of relying on Docuten SaaS.
+
 Basically, this dApp talks directly to the Alastria Telsius blockchain network, where our Docuten Smart Contracts ensure the proof-of-existence and proof-of-life of your documents and invoices are permanently stored and certified.
+
 You only need the hash of the invoice/document you want to verify and introduce it in the next tab to ask directly to the blockchain!
 
 # How does it work?
@@ -10,7 +13,9 @@ You only need the hash of the invoice/document you want to verify and introduce 
 This application has two components:
 
 * **server**: this folder contains a `spring-boot` project (built with `gradle`) which is able to directly interact to one of the Docuten Smart Contracts.
+
 This project connects by default to one of our regular nodes () but you can modify the file `application.yaml` to point to the Alastria regular node you prefer (**remember that one of the advantages of the blockchain is that the information is not stored in one single server, but rather distributed in the whole network**).
+
 This is the configuration you should change in case you want to connect to your own node:
 
 ```
@@ -21,6 +26,7 @@ endpoint:
 
 
 * **dapp**: A simple UI which allows an easy visual interaction with `server` to verify your documents/invoices hashes. By default it is pointing to a deployed version of `server` which is in Heroku.
+
 However, you can deploy the `server` wherever you want (by default in `localhost:8080`) and modify the endpoint in `dapp/src/app/tab/tab2.page.ts` (line 19):
 
 ```
@@ -31,7 +37,9 @@ However, you can deploy the `server` wherever you want (by default in `localhost
 # How to use it?
 
 To easily use the UI you only have to run it locally or install the app in your phone.
+
 However, remember that by default the UI connects to our deployed instance in Heroku. In other words, if you just run the UI you will be relying on an external server querying the blockchain on your behalf.
+
 For example, when you see a summary of a hash in the UI, behind the curtains, the UI will be sending a request to an URL like:
 
 http://docuten-dapp.herokuapp.com/documentDetails?documentHash=c4ecb5508773aef2d4a1c70339c375758741d8dd64c7a2d02e026c63b1c268ac
