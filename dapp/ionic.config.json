@@ -1,0 +1,7 @@
+{
+  "name": "dapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
