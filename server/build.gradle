@@ -1,0 +1,56 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+    baseName = 'docuten-alastria-hash-verification-dApp'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task runBlockchainClient(type:Exec){
+    group 'enxendra'
+
+    String token = project.hasProperty('APP_TOKEN') ? "$APP_TOKEN" : ''
+    environment JAVA_OPTS:"-Dapp.token=${token}", JAVA_HOME:System.getenv('JAVA_HOME') ?:
+            System.properties['JAVA_HOME'] ?:
+                    System.properties['java.home']
+    commandLine './gradlew',
+            'bootRun'
+}
+
+dependencies {
+    compile ("org.codehaus.groovy.modules.http-builder:http-builder:0.7.1")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.apache.commons:commons-lang3:3.0")
+    compile ("io.springfox:springfox-swagger2:2.9.2")
+    compile ("io.springfox:springfox-bean-validators:2.9.2")
+    compile ("io.springfox:springfox-swagger-ui:2.9.2")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile ('org.web3j:core:4.0.1')
+    compile 'io.reactivex.rxjava2:rxjava:2.2.0'
+    testCompile('com.jayway.jsonpath:json-path')
+    testCompile(
+            'junit:junit:4.12',
+            'org.codehaus.groovy:groovy-all:2.4.4',
+            'org.spockframework:spock-core:1.0-groovy-2.4'
+    )
+}

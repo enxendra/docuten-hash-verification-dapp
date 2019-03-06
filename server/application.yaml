@@ -1,0 +1,12 @@
+logging:
+  config: logback-spring.xml
+endpoint:
+  alastria:
+    telsius:  'http://5.57.225.79:22000'
+contract:
+    address:
+     alastria:
+        telsius: '0x8fe3a625641ce728058e83ee0a9f86676e34293c'
+wallet:
+  raw:
+    address:  '0x383ec4b0e12e39b09e72b951fefe8714c1149e41'
