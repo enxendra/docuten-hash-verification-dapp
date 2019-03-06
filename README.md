@@ -95,8 +95,12 @@ open platforms/ios/MyApp.xcodeproj
 
 ### Android? Other operative systems?
 
-We have not tested that, so in case you are interested is up to you :)
-Check the Ionic documentation here: https://ionicframework.com/docs/building/android
+```
+ionic capacitor copy android
+```
+
+We have not tested other OS yet, so in case you are interested is up to you :)
+Check the Ionic documentation here: https://ionicframework.com/docs
 
 
 # Do you want to talk directly to our Smart Contract?
