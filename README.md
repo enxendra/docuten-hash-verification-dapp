@@ -65,7 +65,7 @@ Both options will end up executing a running instance of our `spring-boot` proje
 
 ## Running the UI
 
-First of all, you need to install Ionic and Cordova in oder to build and run the UI:
+First of all, you need to install Ionic and Cordova:
 
 ```
 npm install -g ionic cordova
