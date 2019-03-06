@@ -6,7 +6,7 @@ The idea of this application is to provide an open source solution to allow our 
 
 Basically, this dApp talks directly to the Alastria Telsius blockchain network, where our Docuten Smart Contracts ensure the proof-of-existence and proof-of-life of your documents and invoices are permanently stored and certified.
 
-You only need the hash of the invoice/document you want to verify and introduce it in the next tab to ask directly to the blockchain!
+You only need the hash of the invoice/document you want to verify and introduce to ask directly to the blockchain!
 
 # How does it work?
 
