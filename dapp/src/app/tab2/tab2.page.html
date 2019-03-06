@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Verify Hash - Docuten Blockchain Certification
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  {{error}}
+
+  <ion-card padding>
+  <h2>Search hash</h2>
+
+  <form (ngSubmit)="searchHash()">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="hash" name="hash"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Search</button>
+  </form>
+
+  </ion-card>
+  <ion-card padding>
+
+  <h2>Proof-of-existence</h2>
+  <ion-row>
+    <ion-col><b>Internal identifier</b></ion-col>
+    <ion-col>{{hashInfo.id}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><b>Hash</b></ion-col>
+    <ion-col>{{hashInfo.docHash}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><b>IPFS Hash</b></ion-col>
+    <ion-col>{{hashInfo.ipfsHash}}</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col><b>Certification Account</b></ion-col>
+    <ion-col>{{hashInfo.documentOwner}}</ion-col>
+  </ion-row>
+
+  </ion-card>
+  <ion-card padding>
+
+  <h2>Proof-of-life</h2>
+  <ion-list inset>
+      <ion-row *ngFor="let event of hashInfo.auditRegistries">
+        <ion-col>{{event.timestamp}}</ion-col> <ion-col>{{event.eventDescription}}</ion-col>
+      </ion-row>
+  </ion-list>
+
+  </ion-card>
