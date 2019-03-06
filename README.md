@@ -77,8 +77,6 @@ Once you have done that, you can execute the UI directly, or build a specific ap
 
 ```
 cd dapp
-ionic cordova plugin add cordova-plugin-qrscanner #only first time
-npm install @ionic-native/qr-scanner #only first time
 ionic serve
 ```
 ## Use the dApp form your phone?
