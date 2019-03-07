@@ -4,7 +4,7 @@
 
 This is a dApp (decentralized application) to verify on the Alastria Blockchain the status of documents and invoices which have been securely certified by Docuten SaaS(app.docuten.com).
 
-## But I can do that directly with Docuten Saas, no?
+## But I can do that directly with Docuten Saas, no? Why do I need this dApp?
 
 If you publish a document/invoice by using Docuten (after enabling the blockchain hash certification option) both the existence and the history of your hash will be stored in our *Docuten Smart Contracts* (in the Alastria Telsius b¡Blockchain network). Of course, to verify that info for free right now, you can rely on Docuten SaaS by using a visual form: 
 
