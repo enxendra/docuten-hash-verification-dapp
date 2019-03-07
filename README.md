@@ -1,6 +1,16 @@
 # Docuten Hash Verification dApp for Alastria
 
-This is a decentralized application to verify on the Alastria Blockchain the status of documents and invoices which have been securely certified by Docuten (app.docuten.com).
+## What is this?
+
+This is a dApp (decentralized application) to verify on the Alastria Blockchain the status of documents and invoices which have been securely certified by Docuten SaaS(app.docuten.com).
+
+## But I can do that directly with Docuten Saas, no?
+
+If you publish a document/invoice by using Docuten (after enabling the blockchain hash certification option) both the existence and the history of your hash will be stored in our *Docuten Smart Contracts* (in the Alastria Telsius b¡Blockchain network). Of course, to verify that info for free right now, you can rely on Docuten SaaS by using a visual form: 
+
+https://app.docuten.com/GoSearchByBlockchainHash.html
+
+However, what happens if Docuten Saas is not available in the future? What if you want to verify your hash in ten years? Well... in that case, you can always have a dApp (decentralized application) to talk to the blockchain without relying on Docuten SaaS! That is the goal of this repository :) 
 
 The idea of this application is to provide an open source solution to allow our customers future verifications of already certified documents and invoices, without the need of relying on Docuten SaaS.
 
@@ -36,13 +46,13 @@ endpoint:
 
 To easily use the UI you only have to run it locally or install the app in your phone.
 
-However, remember that by default the UI connects to our deployed instance in Heroku. In other words, if you just run the UI you will be relying on an external server querying the blockchain on your behalf.
+However, remember that by default the UI connects to a deployed instance in Heroku. Basically, an instance for test purposes. In other words, if you just run the UI you will be relying on an external server querying the blockchain on your behalf, a server that eventually can be offline ;)
 
-For example, when you see a summary of a hash in the UI, behind the curtains, the UI will be sending a request to an URL like:
+In other words, if you download the UI and execute it without changing the default endpoint, when you see a summary of a hash, behind the curtains, the UI will be sending a request to an URL like:
 
 http://docuten-dapp.herokuapp.com/documentDetails?documentHash=c4ecb5508773aef2d4a1c70339c375758741d8dd64c7a2d02e026c63b1c268ac
 
-To avoid that dependence and have full control over your dApp, you need to build and run both modules on your own.
+To avoid that dependence and have full control over your dApp, you need to build and run both modules on your own. That is the purpose of that repo!
 
 ## Running the server
 
